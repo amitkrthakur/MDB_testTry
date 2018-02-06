@@ -1,20 +1,347 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<header>
+  <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark light-blue darken-4 scrolling-navbar" [containerInside]="true">
+    <logo>
+      <a class="logo navbar-brand" href="#">
+        <strong>Navbar</strong>
+      </a>
+    </logo>
+    <links>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active waves-light" mdbRippleRadius>
+          <a class="nav-link">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item waves-light" mdbRippleRadius>
+          <a class="nav-link">Link</a>
+        </li>
+        <li class="nav-item waves-light" mdbRippleRadius>
+          <a class="nav-link">Profile</a>
+        </li>
+      </ul>
+    </links>
+  </mdb-navbar>
+  <!-- Main -->
+  <div class="view intro hm-purple-light" style="">
+    <div class="full-bg-img flex-center">
+      <div class="container text-center white-text wow fadeInUp">
+        <h2>This Navbar is fixed and transparent</h2>
+        <br>
+        <h5>It will always stay visible on the top, even when you scroll down</h5>
+        <p>Navbar's background will switch from transparent to solid color while scrolling down</p>
+        <br>
+        <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+      </div>
+    </div>
+  </div>
+  <!-- /.Main -->
+</header>
+<!--Main Navigation-->
 
+<!--Main Layout-->
+<main class="text-center py-5">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+<!--Main Layout-->
+<!--Carousel Wrapper-->
+<mdb-carousel [isControls]="true" [animation]="'slide'">
+  <!--First slide-->
+  <mdb-slide>
+    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
+  </mdb-slide>
+  <!--/First slide-->
+  <!--Second slide-->
+  <mdb-slide>
+    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
+  </mdb-slide>
+  <!--/Second slide-->
+  <!--Third slide-->
+  <mdb-slide>
+    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
+  </mdb-slide>
+  <!--/Third slide-->
+</mdb-carousel>
+<!--/.Carousel Wrapper-->
+<div class="container">
+  <button class="btn btn-primary waves-light" type="button" (click)="test.toggle()" mdbRippleRadius>
+    Toggle collapse
+  </button>
+
+  <div class="" [mdbCollapse]="isCollapsed" #test="bs-collapse">
+    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica,
+      craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+  </div>
+
+  <div style="display: block">
+    <canvas mdbChart [chartType]="chartType" [datasets]="chartDatasets" [labels]="chartLabels" [colors]="chartColors" [options]="chartOptions"
+      [legend]="true" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+    </canvas>
+  </div>
+
+<!-- Login form -->
+<form>
+    <p class="h5 text-center mb-4">Sign in</p>
+
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input type="text" id="defaultForm-email" class="form-control" mdbActive>
+        <label for="defaultForm-email">Your email</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-lock prefix grey-text"></i>
+        <input type="password" id="defaultForm-pass" class="form-control" mdbActive>
+        <label for="defaultForm-pass">Your password</label>
+    </div>
+
+    <div class="text-center">
+        <button class="btn btn-default waves-light" mdbRippleRadius>Login</button>
+    </div>
+</form>
+<!-- Login form -->
+<form>
+    <div class="md-form">
+      <i class="fa fa-envelope prefix"></i>
+      <input mdbActive data-error="wrong email" data-success="valid email" minLength="8" maxLength="25" type="email" class="form-control" id="form9" name="email" mdbInputValidate>
+      <label class="active" for="form9">Type your e-mail</label>
+    </div>
+  
+    <div class="md-form">
+      <i class="fa fa-lock prefix"></i>
+      <input mdbActive data-error="wrong password" data-success="valid password" minLength="10" maxLength="25" type="password" class="form-control" id="form10" name="password" mdbInputValidate>
+      <label class="active" for="form10">Type your password</label>
+    </div>
+  </form> 
+
+  <div class="md-form form-sm">
+      <input type="text" id="form11" class="form-control" disabled>
+      <label for="form11" class="disabled">Example label</label>
+  </div>
+  
+  <form class="form-inline">
+
+      <div class="md-form form-group">
+          <i class="fa fa-envelope prefix"></i>
+          <input mdbActive type="email" class="form-control" id="form9" name="email" mdbInputValidate>
+          <label class="active" for="form9">Type your e-mail</label>
+      </div>
+      <div class="md-form form-group">
+          <i class="fa fa-lock prefix"></i>
+          <input mdbActive type="password" class="form-control" id="form10" name="password" mdbInputValidate>
+          <label class="active" for="form10">Type your password</label>
+      </div>
+  
+      <div class="md-form form-group">
+          <a class="btn btn-primary btn-lg waves-light" mdbRippleRadius>Login</a>
+      </div>
+  
+  </form>
+  <form class="form-inline">
+      <div class="form-group">
+          <input type="checkbox" id="checkbox11" checked="checked">
+          <label for="checkbox11">Classic checkbox</label>
+      </div>
+      <div class="form-group">
+          <input type="checkbox" class="filled-in" id="checkbox22" checked="checked">
+          <label for="checkbox22">Filled-in checkbox</label>
+      </div>
+      <div class="form-group">
+          <input type="checkbox" id="checkbox33" checked="checked">
+          <label for="checkbox33">Classic checkbox</label>
+      </div>
+  </form>
+  <form class="form-inline">
+      <div class="form-group">
+          <input name="group1" type="radio" id="radio11" checked="checked">
+          <label for="radio11">Option 1</label>
+      </div>
+  
+      <div class="form-group">
+          <input name="group1" type="radio" id="radio21">
+          <label for="radio21">Option 2</label>
+      </div>
+  
+      <div class="form-group">
+          <input name="group1" type="radio" id="radio31">
+          <label for="radio31">Option 3</label>
+      </div>
+  </form>
+  <div class="switch">
+      <label>
+        Off
+        <input type="checkbox">
+        <span class="lever"></span>
+        On
+      </label>
+    </div>
+    <mdb-progress-bar class="progress primary-color-dark" mode="indeterminate"></mdb-progress-bar>
+    <mdb-progressbar value="25" min="0" max="100" type="success" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></mdb-progressbar>
+    <mdb-progressbar value="50" min="0" max="100" type="info" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></mdb-progressbar>
+    <mdb-progressbar value="75" min="0" max="100" type="warning" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></mdb-progressbar>
+    <mdb-progressbar value="100" min="0" max="100" type="danger" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></mdb-progressbar>
+    <form>
+        <div class="file-field">
+          <div class="btn btn-primary btn-sm waves-light" mdbRippleRadius>
+            <input type="file" mdbFileSelect (uploadOutput)="onUploadOutput($event)">
+          </div>
+
+        </div>
+      </form>
+             
+  <div class="row">
+      <div class="col-md-6">
+          <mdb-select [options]="optionsSelect" placeholder="Choose your option"></mdb-select>
+          <label>Example label</label>
+      </div>
+  </div>
+  <div class="col-md-6">
+    <mdb-select [options]="colorSelect" placeholder="Choose your option" class="colorful-select dropdown-primary"></mdb-select>
+    <label>Blue select</label>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <mdb-select [options]="optionsSelect" [multiple]="true" placeholder="Choose your option"></mdb-select>
+      <label>Example label</label>
+    </div>
+  </div>
+
+
+</div>
+
+<!--Section: Features v.4-->
+<section class="section feature-box container">
+
+  <!--Section heading-->
+  <h1 class="section-heading pt-4">Why is it so great?</h1>
+  <!--Section description-->
+  <p class="section-description lead grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi,
+    veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
+
+  <!--Grid row-->
+  <div class="row features-small">
+
+    <!--Grid column-->
+    <div class="col-md-4">
+
+      <!--Grid row-->
+      <div class="row mb-2">
+        <div class="col-2">
+          <i class="fa fa-flag-checkered indigo-text"></i>
+        </div>
+        <div class="col-10">
+          <h5 class="feature-title">International</h5>
+          <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti
+            hic.
+          </p>
+        </div>
+      </div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="row mb-2">
+        <div class="col-2">
+          <i class="fa fa-flask blue-text"></i>
+        </div>
+        <div class="col-10">
+          <h5 class="feature-title">Experimental</h5>
+          <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti
+            hic.
+          </p>
+        </div>
+      </div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="row mb-2">
+        <div class="col-2">
+          <i class="fa fa-glass cyan-text"></i>
+        </div>
+        <div class="col-10">
+          <h5 class="feature-title">Relaxing</h5>
+          <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti
+            hic.
+          </p>
+        </div>
+      </div>
+      <!--Grid row-->
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-md-4 mb-2 center-on-small-only flex-center">
+      <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png" alt="" class="z-depth-0">
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-md-4">
+
+      <!--Grid row-->
+      <div class="row mb-2">
+        <div class="col-2">
+          <i class="fa fa-heart deep-purple-text"></i>
+        </div>
+        <div class="col-10">
+          <h5 class="feature-title">Beloved</h5>
+          <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti
+            hic.
+          </p>
+        </div>
+      </div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="row mb-2">
+        <div class="col-2">
+          <i class="fa fa-flash purple-text"></i>
+        </div>
+        <div class="col-10">
+          <h5 class="feature-title">Rapid</h5>
+          <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti
+            hic.
+          </p>
+        </div>
+      </div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="row mb-2">
+        <div class="col-2">
+          <i class="fa fa-magic pink-text"></i>
+        </div>
+        <div class="col-10">
+          <h5 class="feature-title">Magical</h5>
+          <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti
+            hic.
+          </p>
+        </div>
+      </div>
+      <!--Grid row-->
+
+    </div>
+    <!--Grid column-->
+
+  </div>
+  <!--Grid row-->
+
+</section>
+<!--/Section: Features v.4-->
